@@ -12,6 +12,10 @@
         <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
 
+    <PropertyGroup Condition="$(Configuration.Contains('R21'))">
+        <RevitVersion>2021</RevitVersion>
+        <TargetFramework>net48</TargetFramework>
+    </PropertyGroup>
     <PropertyGroup Condition="$(Configuration.Contains('R22'))">
         <RevitVersion>2022</RevitVersion>
         <TargetFramework>net48</TargetFramework>

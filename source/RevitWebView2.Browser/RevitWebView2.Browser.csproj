@@ -53,12 +53,4 @@
       <ProjectReference Include="..\SchemaMigrations.Database\SchemaMigrations.Database.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Page Update="Views\LoadingPage.xaml">
-        <Generator>MSBuild:Compile</Generator>
-        <XamlRuntime>Wpf</XamlRuntime>
-        <SubType>Designer</SubType>
-      </Page>
-    </ItemGroup>
-
 </Project>

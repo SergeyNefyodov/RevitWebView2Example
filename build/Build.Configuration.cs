@@ -19,7 +19,7 @@
 
         InstallersMap = new()
         {
-            { Solution.GetProject("Installer"), Solution.RevitWebView2_Application }
+            { Solution.Build.Installer, Solution.RevitWebView2_Application }
         };
     }
 }

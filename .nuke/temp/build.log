@@ -1,50 +1,538 @@
-14:31:44.651 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
-14:31:44.685 | V |                      | Passing value for Build.Solution (RevitWebView2Example.sln)
-14:31:44.693 | V |                      | Passing value for NukeBuild.Verbosity (Normal)
-14:31:44.693 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
-14:31:44.694 | V |                      | InjectParameterValues.OnBuildCreated (100)
-14:31:44.705 | V |                      | HandleShellCompletion.OnBuildCreated (75)
-14:31:44.781 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
-14:31:44.781 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
-14:31:44.789 | V |                      | UpdateNotification.OnBuildCreated (10)
-14:31:44.790 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
-14:31:44.790 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
-14:31:44.791 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
-14:31:44.812 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
-14:31:44.812 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
-14:31:44.813 | V |                      | Telemetry.OnBuildInitialized (0)
-14:31:45.456 | V |                      | Sending BuildStarted telemetry event ...
-14:31:45.457 | V |                      |   build_components         = 
-14:31:45.457 | V |                      |   build_type               = Project
-14:31:45.457 | V |                      |   compile_time             = 6
-14:31:45.457 | V |                      |   config_generators        = 
-14:31:45.457 | V |                      |   host                     = Rider
-14:31:45.457 | V |                      |   num_custom_components    = 0
-14:31:45.457 | V |                      |   num_custom_extensions    = 0
-14:31:45.457 | V |                      |   num_partitioned_targets  = 0
-14:31:45.457 | V |                      |   num_secrets              = 1
-14:31:45.457 | V |                      |   num_targets              = 5
-14:31:45.457 | V |                      |   os_architecture          = X64
-14:31:45.457 | V |                      |   os_platform              = Windows
-14:31:45.457 | V |                      |   target_framework         = .NETCoreApp,Version=v8.0
-14:31:45.457 | V |                      |   version_dotnet_sdk       = 8.0.403
-14:31:45.457 | V |                      |   version_nuke_common      = 8.0.0
-14:31:45.457 | V |                      |   version_nuke_global_tool = 8.1.1
-14:31:45.731 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
-14:31:45.733 | W |                      | Could not inject value for Build.GitRepository
-System.ArgumentException: Could not find commit information
-   at Nuke.Common.Assert.NotNull[T](T obj, String message, String argumentExpression) in /_/source/Nuke.Utilities/Assert.cs:line 73
-   at Nuke.Common.Git.GitRepository.GetCommitFromHead(AbsolutePath gitDirectory, String head) in /_/source/Nuke.Build/VCS/GitRepository.cs:line 105
-   at Nuke.Common.Git.GitRepository.FromLocalDirectory(AbsolutePath directory) in /_/source/Nuke.Build/VCS/GitRepository.cs:line 54
-   at Nuke.Common.Git.GitRepositoryAttribute.GetValue(MemberInfo member, Object instance) in /_/source/Nuke.Common/Attributes/GitRepositoryAttribute.cs:line 22
-   at Nuke.Common.ValueInjection.ValueInjectionAttributeBase.TryGetValue(MemberInfo member, Object instance) in /_/source/Nuke.Build/Execution/Extensibility/ValueInjectionAttributeBase.cs:line 26
-14:31:45.759 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
-14:31:45.760 | V |                      | Target-unrelated exception was thrown
-System.ArgumentNullException: Value cannot be null. (Parameter 'key')
-   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
-   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
-   at Build.OnBuildInitialized() in C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\Build\Build.Configuration.cs:line 20
-   at Nuke.Common.Execution.EventInvoker.OnBuildInitialized(IReadOnlyCollection`1 executableTargets, IReadOnlyCollection`1 executionPlan) in /_/source/Nuke.Build/Execution/Extensions/EventInvoker.cs:line 29
-   at Nuke.Common.Utilities.Collections.EnumerableExtensions.ForEach[T](IEnumerable`1 enumerable, Action`1 action) in /_/source/Nuke.Utilities/Collections/Enumerable.ForEach.cs:line 20
-   at Nuke.Common.NukeBuild.ExecuteExtension[TExtension](Expression`1 action)
-   at Nuke.Common.Execution.BuildManager.Execute[T](Expression`1[] defaultTargetExpressions)
+14:35:15.021 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+14:35:15.036 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+14:35:15.036 | V |                      | InjectParameterValues.OnBuildCreated (100)
+14:35:15.072 | V |                      | HandleShellCompletion.OnBuildCreated (75)
+14:35:15.301 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+14:35:15.302 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+14:35:15.309 | V |                      | UpdateNotification.OnBuildCreated (10)
+14:35:15.309 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+14:35:15.310 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+14:35:15.311 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+14:35:15.326 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
+14:35:15.326 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
+14:35:15.326 | V |                      | Telemetry.OnBuildInitialized (0)
+14:35:15.695 | V |                      | Sending BuildStarted telemetry event ...
+14:35:15.696 | V |                      |   build_components         = 
+14:35:15.696 | V |                      |   build_type               = Project
+14:35:15.696 | V |                      |   compile_time             = 5
+14:35:15.696 | V |                      |   config_generators        = 
+14:35:15.696 | V |                      |   host                     = Rider
+14:35:15.696 | V |                      |   num_custom_components    = 0
+14:35:15.696 | V |                      |   num_custom_extensions    = 0
+14:35:15.696 | V |                      |   num_partitioned_targets  = 0
+14:35:15.696 | V |                      |   num_secrets              = 1
+14:35:15.696 | V |                      |   num_targets              = 5
+14:35:15.696 | V |                      |   os_architecture          = X64
+14:35:15.696 | V |                      |   os_platform              = Windows
+14:35:15.696 | V |                      |   repo_branch              = main
+14:35:15.696 | V |                      |   repo_commit              = 1ed22b
+14:35:15.696 | V |                      |   repo_provider            = <null>
+14:35:15.696 | V |                      |   repo_url                 = <null>
+14:35:15.696 | V |                      |   target_framework         = .NETCoreApp,Version=v8.0
+14:35:15.696 | V |                      |   version_dotnet_sdk       = 8.0.403
+14:35:15.696 | V |                      |   version_nuke_common      = 8.1.2
+14:35:15.696 | V |                      |   version_nuke_global_tool = 8.1.1
+14:35:16.015 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+14:35:16.031 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+14:35:16.039 | V | Clean                | EventInvoker.OnTargetRunning (-3.4028235E+38)
+14:35:16.040 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\output
+14:35:16.045 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\install\bin
+14:35:16.046 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\install\obj
+14:35:16.050 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin
+14:35:16.051 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\obj
+14:35:16.056 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin
+14:35:16.057 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\obj
+14:35:16.063 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\bin
+14:35:16.065 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\obj
+14:35:16.069 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\bin
+14:35:16.070 | I | Clean                | Cleaning directory: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\obj
+14:35:16.084 | I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean --configuration "Release R21" --verbosity minimal --nologo
+14:35:16.085 | V | Clean                | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:16.618 | I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean --configuration "Release R22" --verbosity minimal --nologo
+14:35:16.619 | V | Clean                | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:17.162 | I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean --configuration "Release R23" --verbosity minimal --nologo
+14:35:17.162 | V | Clean                | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:17.721 | I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean --configuration "Release R24" --verbosity minimal --nologo
+14:35:17.721 | V | Clean                | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:18.273 | I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean --configuration "Release R25" --verbosity minimal --nologo
+14:35:18.274 | V | Clean                | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:18.816 | W | Clean                | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj]
+14:35:18.853 | W | Clean                | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj]
+14:35:18.880 | I | Clean                | > "C:\Program Files\dotnet\dotnet.exe" clean --configuration Installer --verbosity minimal --nologo
+14:35:18.880 | V | Clean                | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:19.404 | V | Clean                | Telemetry.OnTargetSucceeded (0)
+14:35:19.404 | V | Clean                | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+14:35:19.407 | V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+14:35:19.412 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build --configuration "Release R21" --verbosity minimal /property:Version=1.0.0
+14:35:19.413 | V | Compile              | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:19.877 | D | Compile              |   Определение проектов для восстановления...
+14:35:20.229 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj (за 160 мс).
+14:35:20.230 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj (за 160 мс).
+14:35:20.249 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj (за 194 мс).
+14:35:20.277 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj (за 220 мс).
+14:35:21.172 | D | Compile              |   SchemaMigrations.Abstractions -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\bin\Debug\net48\SchemaMigrations.Abstractions.dll
+14:35:21.457 | D | Compile              |   SchemaMigrations.Database -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\bin\Release R21\net48\SchemaMigrations.Database.dll
+14:35:22.392 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R21\RevitWebView2.Browser.dll
+14:35:22.414 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R21\publish
+14:35:22.704 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\RevitWebView2.Application.dll
+14:35:22.738 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish
+14:35:22.824 | D | Compile              |   Publishing add-in RevitWebView2.Application -> C:\Users\Sergei Nefyodov\AppData\Roaming\Autodesk\Revit\Addins\2021\RevitWebView2.Application
+14:35:22.825 | D | Compile              | 
+14:35:22.826 | D | Compile              | Сборка успешно завершена.
+14:35:22.827 | D | Compile              |     Предупреждений: 0
+14:35:22.827 | D | Compile              |     Ошибок: 0
+14:35:22.827 | D | Compile              | 
+14:35:22.828 | D | Compile              | Прошло времени 00:00:03.25
+14:35:22.863 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build --configuration "Release R22" --verbosity minimal /property:Version=1.0.0
+14:35:22.864 | V | Compile              | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:23.464 | D | Compile              |   Определение проектов для восстановления...
+14:35:23.856 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj (за 213 мс).
+14:35:23.857 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj (за 213 мс).
+14:35:23.857 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj (за 213 мс).
+14:35:23.858 | D | Compile              |   Проектов обновлено для восстановления: 1 из 4.
+14:35:23.990 | D | Compile              |   SchemaMigrations.Abstractions -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\bin\Release\net48\SchemaMigrations.Abstractions.dll
+14:35:24.159 | D | Compile              |   SchemaMigrations.Database -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\bin\Release R22\net48\SchemaMigrations.Database.dll
+14:35:24.713 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R22\RevitWebView2.Browser.dll
+14:35:24.730 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R22\publish
+14:35:24.944 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\RevitWebView2.Application.dll
+14:35:24.979 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish
+14:35:25.008 | D | Compile              |   Publishing add-in RevitWebView2.Application -> C:\Users\Sergei Nefyodov\AppData\Roaming\Autodesk\Revit\Addins\2022\RevitWebView2.Application
+14:35:25.012 | D | Compile              | 
+14:35:25.013 | D | Compile              | Сборка успешно завершена.
+14:35:25.013 | D | Compile              |     Предупреждений: 0
+14:35:25.014 | D | Compile              |     Ошибок: 0
+14:35:25.014 | D | Compile              | 
+14:35:25.014 | D | Compile              | Прошло времени 00:00:01.95
+14:35:25.055 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build --configuration "Release R23" --verbosity minimal /property:Version=1.0.0
+14:35:25.056 | V | Compile              | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:25.553 | D | Compile              |   Определение проектов для восстановления...
+14:35:25.955 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj (за 212 мс).
+14:35:25.957 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj (за 212 мс).
+14:35:25.957 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj (за 213 мс).
+14:35:25.958 | D | Compile              |   Проектов обновлено для восстановления: 1 из 4.
+14:35:26.029 | D | Compile              |   SchemaMigrations.Abstractions -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\bin\Release\net48\SchemaMigrations.Abstractions.dll
+14:35:26.212 | D | Compile              |   SchemaMigrations.Database -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\bin\Release R23\net48\SchemaMigrations.Database.dll
+14:35:26.668 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R23\RevitWebView2.Browser.dll
+14:35:26.686 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R23\publish
+14:35:26.900 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\RevitWebView2.Application.dll
+14:35:26.945 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish
+14:35:26.988 | D | Compile              |   Publishing add-in RevitWebView2.Application -> C:\Users\Sergei Nefyodov\AppData\Roaming\Autodesk\Revit\Addins\2023\RevitWebView2.Application
+14:35:26.992 | D | Compile              | 
+14:35:26.992 | D | Compile              | Сборка успешно завершена.
+14:35:26.993 | D | Compile              |     Предупреждений: 0
+14:35:26.993 | D | Compile              |     Ошибок: 0
+14:35:26.994 | D | Compile              | 
+14:35:26.994 | D | Compile              | Прошло времени 00:00:01.78
+14:35:27.025 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build --configuration "Release R24" --verbosity minimal /property:Version=1.0.0
+14:35:27.026 | V | Compile              | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:27.520 | D | Compile              |   Определение проектов для восстановления...
+14:35:27.899 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj (за 211 мс).
+14:35:27.901 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj (за 211 мс).
+14:35:27.901 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj (за 211 мс).
+14:35:27.902 | D | Compile              |   Проектов обновлено для восстановления: 1 из 4.
+14:35:27.967 | D | Compile              |   SchemaMigrations.Abstractions -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\bin\Release\net48\SchemaMigrations.Abstractions.dll
+14:35:28.124 | D | Compile              |   SchemaMigrations.Database -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\bin\Release R24\net48\SchemaMigrations.Database.dll
+14:35:28.542 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R24\RevitWebView2.Browser.dll
+14:35:28.561 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R24\publish
+14:35:28.758 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\RevitWebView2.Application.dll
+14:35:28.796 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish
+14:35:28.822 | D | Compile              |   Publishing add-in RevitWebView2.Application -> C:\Users\Sergei Nefyodov\AppData\Roaming\Autodesk\Revit\Addins\2024\RevitWebView2.Application
+14:35:28.840 | D | Compile              | 
+14:35:28.841 | D | Compile              | Сборка успешно завершена.
+14:35:28.841 | D | Compile              |     Предупреждений: 0
+14:35:28.841 | D | Compile              |     Ошибок: 0
+14:35:28.842 | D | Compile              | 
+14:35:28.842 | D | Compile              | Прошло времени 00:00:01.66
+14:35:28.869 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build --configuration "Release R25" --verbosity minimal /property:Version=1.0.0
+14:35:28.870 | V | Compile              | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:29.393 | D | Compile              |   Определение проектов для восстановления...
+14:35:29.805 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj (за 209 мс).
+14:35:29.806 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj (за 209 мс).
+14:35:29.806 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj (за 211 мс).
+14:35:29.806 | D | Compile              |   Проектов обновлено для восстановления: 1 из 4.
+14:35:29.869 | D | Compile              |   SchemaMigrations.Abstractions -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\bin\Release\net48\SchemaMigrations.Abstractions.dll
+14:35:29.887 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj]
+14:35:29.891 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj]
+14:35:29.978 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj]
+14:35:30.774 | D | Compile              |   SchemaMigrations.Database -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\bin\Release R25\net8.0-windows\SchemaMigrations.Database.dll
+14:35:30.909 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser_obynmvdw_wpftmp.csproj]
+14:35:31.315 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R25\RevitWebView2.Browser.dll
+14:35:31.331 | D | Compile              |   RevitWebView2.Browser -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\bin\Release R25\publish
+14:35:31.613 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\RevitWebView2.Application.dll
+14:35:31.659 | D | Compile              |   RevitWebView2.Application -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish
+14:35:31.687 | D | Compile              |   Publishing add-in RevitWebView2.Application -> C:\Users\Sergei Nefyodov\AppData\Roaming\Autodesk\Revit\Addins\2025\RevitWebView2.Application
+14:35:31.690 | D | Compile              | 
+14:35:31.691 | D | Compile              | Сборка успешно завершена.
+14:35:31.692 | D | Compile              | 
+14:35:31.692 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Database\SchemaMigrations.Database.csproj]
+14:35:31.693 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser.csproj]
+14:35:31.693 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\RevitWebView2.Application.csproj]
+14:35:31.694 | W | Compile              | C:\Program Files\dotnet\sdk\8.0.403\Microsoft.Common.CurrentVersion.targets(1890,5): warning NU1702: Элемент ProjectReference "C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\SchemaMigrations.Abstractions\SchemaMigrations.Abstractions.csproj" был разрешен с помощью ".NETFramework,Version=v4.8", а не целевой платформы проекта ".NETCoreApp,Version=v8.0". Этот проект может быть не полностью совместим с вашим проектом. [C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Browser\RevitWebView2.Browser_obynmvdw_wpftmp.csproj]
+14:35:31.694 | D | Compile              |     Предупреждений: 4
+14:35:31.694 | D | Compile              |     Ошибок: 0
+14:35:31.695 | D | Compile              | 
+14:35:31.695 | D | Compile              | Прошло времени 00:00:02.67
+14:35:31.729 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build --configuration Installer --verbosity minimal /property:Version=1.0.0
+14:35:31.729 | V | Compile              | @ C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example
+14:35:32.205 | D | Compile              |   Определение проектов для восстановления...
+14:35:32.925 | D | Compile              |   Восстановлен C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\install\Installer.csproj (за 576 мс).
+14:35:33.211 | D | Compile              |   Installer -> C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\install\bin\Release\Installer.exe
+14:35:33.218 | D | Compile              | 
+14:35:33.219 | D | Compile              | Сборка успешно завершена.
+14:35:33.219 | D | Compile              |     Предупреждений: 0
+14:35:33.219 | D | Compile              |     Ошибок: 0
+14:35:33.219 | D | Compile              | 
+14:35:33.220 | D | Compile              | Прошло времени 00:00:01.33
+14:35:33.240 | V | Compile              | Telemetry.OnTargetSucceeded (0)
+14:35:33.328 | V | Compile              | Sending TargetSucceeded telemetry event ...
+14:35:33.328 | V | Compile              |   build_components         = 
+14:35:33.328 | V | Compile              |   build_type               = Project
+14:35:33.328 | V | Compile              |   compile_time             = 22
+14:35:33.328 | V | Compile              |   config_generators        = 
+14:35:33.328 | V | Compile              |   host                     = Rider
+14:35:33.328 | V | Compile              |   num_custom_components    = 0
+14:35:33.328 | V | Compile              |   num_custom_extensions    = 0
+14:35:33.328 | V | Compile              |   num_partitioned_targets  = 0
+14:35:33.328 | V | Compile              |   num_secrets              = 1
+14:35:33.328 | V | Compile              |   num_targets              = 5
+14:35:33.328 | V | Compile              |   os_architecture          = X64
+14:35:33.328 | V | Compile              |   os_platform              = Windows
+14:35:33.328 | V | Compile              |   repo_branch              = main
+14:35:33.328 | V | Compile              |   repo_commit              = 1ed22b
+14:35:33.328 | V | Compile              |   repo_provider            = <null>
+14:35:33.328 | V | Compile              |   repo_url                 = <null>
+14:35:33.328 | V | Compile              |   target_current_partition = 1
+14:35:33.328 | V | Compile              |   target_duration          = 14
+14:35:33.328 | V | Compile              |   target_framework         = .NETCoreApp,Version=v8.0
+14:35:33.328 | V | Compile              |   target_name              = Compile
+14:35:33.328 | V | Compile              |   target_total_partitions  = 1
+14:35:33.328 | V | Compile              |   version_dotnet_sdk       = 8.0.403
+14:35:33.328 | V | Compile              |   version_nuke_common      = 8.1.2
+14:35:33.328 | V | Compile              |   version_nuke_global_tool = 8.1.1
+14:35:33.382 | V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+14:35:33.384 | V | CreateInstaller      | EventInvoker.OnTargetRunning (-3.4028235E+38)
+14:35:33.385 | I | CreateInstaller      | Project: RevitWebView2.Application
+14:35:33.776 | I | CreateInstaller      | Installer files for version 2021:
+14:35:33.776 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2Application.addin
+14:35:33.776 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\CommunityToolkit.Mvvm.dll
+14:35:33.777 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\JetBrains.Annotations.dll
+14:35:33.777 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Bcl.AsyncInterfaces.dll
+14:35:33.778 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Abstractions.dll
+14:35:33.778 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Binder.dll
+14:35:33.778 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.CommandLine.dll
+14:35:33.779 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.dll
+14:35:33.779 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+14:35:33.779 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.FileExtensions.dll
+14:35:33.780 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Json.dll
+14:35:33.780 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.UserSecrets.dll
+14:35:33.780 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+14:35:33.781 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.dll
+14:35:33.781 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.Abstractions.dll
+14:35:33.781 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.dll
+14:35:33.782 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Abstractions.dll
+14:35:33.782 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Physical.dll
+14:35:33.782 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.FileSystemGlobbing.dll
+14:35:33.783 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.Abstractions.dll
+14:35:33.783 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.dll
+14:35:33.784 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Abstractions.dll
+14:35:33.784 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Configuration.dll
+14:35:33.784 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Console.dll
+14:35:33.785 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Debug.dll
+14:35:33.785 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.dll
+14:35:33.785 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventLog.dll
+14:35:33.785 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventSource.dll
+14:35:33.786 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+14:35:33.786 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Options.dll
+14:35:33.786 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Extensions.Primitives.dll
+14:35:33.787 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Core.dll
+14:35:33.787 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Web.WebView2.WinForms.dll
+14:35:33.788 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Wpf.dll
+14:35:33.788 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Nice3point.Revit.Extensions.dll
+14:35:33.788 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Nice3point.Revit.Toolkit.dll
+14:35:33.789 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\RevitWebView2.Application.dll
+14:35:33.789 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\RevitWebView2.Browser.dll
+14:35:33.790 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.dll
+14:35:33.790 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.pdb
+14:35:33.790 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\SchemaMigrations.Database.dll
+14:35:33.791 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\SchemaMigrations.Database.pdb
+14:35:33.791 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\SchemaMigrations.Database.xml
+14:35:33.791 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Buffers.dll
+14:35:33.792 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.ComponentModel.Annotations.dll
+14:35:33.792 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Diagnostics.DiagnosticSource.dll
+14:35:33.792 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Memory.dll
+14:35:33.793 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Numerics.Vectors.dll
+14:35:33.793 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Runtime.CompilerServices.Unsafe.dll
+14:35:33.793 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Text.Encodings.Web.dll
+14:35:33.794 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Text.Json.dll
+14:35:33.794 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.Threading.Tasks.Extensions.dll
+14:35:33.795 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\System.ValueTuple.dll
+14:35:33.795 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\WebView2Loader.dll
+14:35:33.795 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\Wpf.Ui.dll
+14:35:33.796 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R21\publish\Revit 2021 Release R21 addin\RevitWebView2.Application\runtimes\win-x64\native\WebView2Loader.dll
+14:35:33.796 | I | CreateInstaller      | Installer files for version 2022:
+14:35:33.796 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2Application.addin
+14:35:33.797 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\CommunityToolkit.Mvvm.dll
+14:35:33.797 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\JetBrains.Annotations.dll
+14:35:33.798 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Bcl.AsyncInterfaces.dll
+14:35:33.798 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Abstractions.dll
+14:35:33.799 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Binder.dll
+14:35:33.799 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.CommandLine.dll
+14:35:33.799 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.dll
+14:35:33.800 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+14:35:33.800 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.FileExtensions.dll
+14:35:33.800 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Json.dll
+14:35:33.801 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.UserSecrets.dll
+14:35:33.801 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+14:35:33.801 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.dll
+14:35:33.802 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.Abstractions.dll
+14:35:33.802 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.dll
+14:35:33.803 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Abstractions.dll
+14:35:33.803 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Physical.dll
+14:35:33.803 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.FileSystemGlobbing.dll
+14:35:33.804 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.Abstractions.dll
+14:35:33.804 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.dll
+14:35:33.804 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Abstractions.dll
+14:35:33.805 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Configuration.dll
+14:35:33.805 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Console.dll
+14:35:33.805 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Debug.dll
+14:35:33.806 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.dll
+14:35:33.806 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventLog.dll
+14:35:33.806 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventSource.dll
+14:35:33.807 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+14:35:33.807 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Options.dll
+14:35:33.807 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Extensions.Primitives.dll
+14:35:33.808 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Core.dll
+14:35:33.808 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Web.WebView2.WinForms.dll
+14:35:33.808 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Wpf.dll
+14:35:33.809 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Nice3point.Revit.Extensions.dll
+14:35:33.809 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Nice3point.Revit.Toolkit.dll
+14:35:33.810 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\RevitWebView2.Application.dll
+14:35:33.810 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\RevitWebView2.Browser.dll
+14:35:33.810 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.dll
+14:35:33.811 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.pdb
+14:35:33.811 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\SchemaMigrations.Database.dll
+14:35:33.811 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\SchemaMigrations.Database.pdb
+14:35:33.812 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\SchemaMigrations.Database.xml
+14:35:33.812 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Buffers.dll
+14:35:33.813 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.ComponentModel.Annotations.dll
+14:35:33.813 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Diagnostics.DiagnosticSource.dll
+14:35:33.814 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Memory.dll
+14:35:33.814 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Numerics.Vectors.dll
+14:35:33.814 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Runtime.CompilerServices.Unsafe.dll
+14:35:33.815 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Text.Encodings.Web.dll
+14:35:33.815 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Text.Json.dll
+14:35:33.815 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.Threading.Tasks.Extensions.dll
+14:35:33.816 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\System.ValueTuple.dll
+14:35:33.816 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\WebView2Loader.dll
+14:35:33.816 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\Wpf.Ui.dll
+14:35:33.817 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R22\publish\Revit 2022 Release R22 addin\RevitWebView2.Application\runtimes\win-x64\native\WebView2Loader.dll
+14:35:33.817 | I | CreateInstaller      | Installer files for version 2023:
+14:35:33.817 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2Application.addin
+14:35:33.818 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\CommunityToolkit.Mvvm.dll
+14:35:33.818 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\JetBrains.Annotations.dll
+14:35:33.819 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Bcl.AsyncInterfaces.dll
+14:35:33.819 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Abstractions.dll
+14:35:33.819 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Binder.dll
+14:35:33.820 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.CommandLine.dll
+14:35:33.820 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.dll
+14:35:33.820 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+14:35:33.821 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.FileExtensions.dll
+14:35:33.821 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Json.dll
+14:35:33.821 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.UserSecrets.dll
+14:35:33.822 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+14:35:33.822 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.dll
+14:35:33.822 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.Abstractions.dll
+14:35:33.823 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.dll
+14:35:33.823 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Abstractions.dll
+14:35:33.823 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Physical.dll
+14:35:33.824 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.FileSystemGlobbing.dll
+14:35:33.824 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.Abstractions.dll
+14:35:33.824 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.dll
+14:35:33.825 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Abstractions.dll
+14:35:33.825 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Configuration.dll
+14:35:33.825 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Console.dll
+14:35:33.826 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Debug.dll
+14:35:33.826 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.dll
+14:35:33.826 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventLog.dll
+14:35:33.827 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventSource.dll
+14:35:33.827 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+14:35:33.828 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Options.dll
+14:35:33.828 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Extensions.Primitives.dll
+14:35:33.828 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Core.dll
+14:35:33.829 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Web.WebView2.WinForms.dll
+14:35:33.829 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Wpf.dll
+14:35:33.829 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Nice3point.Revit.Extensions.dll
+14:35:33.830 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Nice3point.Revit.Toolkit.dll
+14:35:33.831 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\RevitWebView2.Application.dll
+14:35:33.831 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\RevitWebView2.Browser.dll
+14:35:33.832 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.dll
+14:35:33.832 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.pdb
+14:35:33.832 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\SchemaMigrations.Database.dll
+14:35:33.833 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\SchemaMigrations.Database.pdb
+14:35:33.833 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\SchemaMigrations.Database.xml
+14:35:33.834 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Buffers.dll
+14:35:33.834 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.ComponentModel.Annotations.dll
+14:35:33.835 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Diagnostics.DiagnosticSource.dll
+14:35:33.835 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Memory.dll
+14:35:33.835 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Numerics.Vectors.dll
+14:35:33.836 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Runtime.CompilerServices.Unsafe.dll
+14:35:33.836 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Text.Encodings.Web.dll
+14:35:33.836 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Text.Json.dll
+14:35:33.837 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.Threading.Tasks.Extensions.dll
+14:35:33.837 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\System.ValueTuple.dll
+14:35:33.837 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\WebView2Loader.dll
+14:35:33.838 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\Wpf.Ui.dll
+14:35:33.838 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R23\publish\Revit 2023 Release R23 addin\RevitWebView2.Application\runtimes\win-x64\native\WebView2Loader.dll
+14:35:33.838 | I | CreateInstaller      | Installer files for version 2024:
+14:35:33.839 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2Application.addin
+14:35:33.839 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\CommunityToolkit.Mvvm.dll
+14:35:33.840 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\JetBrains.Annotations.dll
+14:35:33.840 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Bcl.AsyncInterfaces.dll
+14:35:33.840 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Abstractions.dll
+14:35:33.841 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Binder.dll
+14:35:33.841 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.CommandLine.dll
+14:35:33.841 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.dll
+14:35:33.842 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+14:35:33.842 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.FileExtensions.dll
+14:35:33.842 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Json.dll
+14:35:33.843 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.UserSecrets.dll
+14:35:33.843 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+14:35:33.843 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.dll
+14:35:33.844 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.Abstractions.dll
+14:35:33.844 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Diagnostics.dll
+14:35:33.845 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Abstractions.dll
+14:35:33.845 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Physical.dll
+14:35:33.845 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.FileSystemGlobbing.dll
+14:35:33.846 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.Abstractions.dll
+14:35:33.846 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.dll
+14:35:33.846 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Abstractions.dll
+14:35:33.847 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Configuration.dll
+14:35:33.847 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Console.dll
+14:35:33.847 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Debug.dll
+14:35:33.848 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.dll
+14:35:33.848 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventLog.dll
+14:35:33.849 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventSource.dll
+14:35:33.849 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+14:35:33.849 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Options.dll
+14:35:33.850 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Extensions.Primitives.dll
+14:35:33.850 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Core.dll
+14:35:33.850 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Web.WebView2.WinForms.dll
+14:35:33.851 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Wpf.dll
+14:35:33.851 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Nice3point.Revit.Extensions.dll
+14:35:33.851 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Nice3point.Revit.Toolkit.dll
+14:35:33.852 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\RevitWebView2.Application.dll
+14:35:33.852 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\RevitWebView2.Browser.dll
+14:35:33.852 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.dll
+14:35:33.853 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.pdb
+14:35:33.853 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\SchemaMigrations.Database.dll
+14:35:33.853 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\SchemaMigrations.Database.pdb
+14:35:33.854 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\SchemaMigrations.Database.xml
+14:35:33.854 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Buffers.dll
+14:35:33.854 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.ComponentModel.Annotations.dll
+14:35:33.855 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Diagnostics.DiagnosticSource.dll
+14:35:33.855 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Memory.dll
+14:35:33.855 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Numerics.Vectors.dll
+14:35:33.856 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Runtime.CompilerServices.Unsafe.dll
+14:35:33.856 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Text.Encodings.Web.dll
+14:35:33.857 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Text.Json.dll
+14:35:33.857 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.Threading.Tasks.Extensions.dll
+14:35:33.857 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\System.ValueTuple.dll
+14:35:33.858 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\WebView2Loader.dll
+14:35:33.858 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\Wpf.Ui.dll
+14:35:33.858 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R24\publish\Revit 2024 Release R24 addin\RevitWebView2.Application\runtimes\win-x64\native\WebView2Loader.dll
+14:35:33.859 | I | CreateInstaller      | Installer files for version 2025:
+14:35:33.859 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2Application.addin
+14:35:33.859 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\CommunityToolkit.Mvvm.dll
+14:35:33.860 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\JetBrains.Annotations.dll
+14:35:33.860 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Abstractions.dll
+14:35:33.861 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Binder.dll
+14:35:33.861 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.CommandLine.dll
+14:35:33.861 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.dll
+14:35:33.862 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+14:35:33.862 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.FileExtensions.dll
+14:35:33.862 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.Json.dll
+14:35:33.863 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Configuration.UserSecrets.dll
+14:35:33.863 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+14:35:33.864 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.DependencyInjection.dll
+14:35:33.864 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Abstractions.dll
+14:35:33.864 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.FileProviders.Physical.dll
+14:35:33.865 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.FileSystemGlobbing.dll
+14:35:33.865 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.Abstractions.dll
+14:35:33.865 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Hosting.dll
+14:35:33.866 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Abstractions.dll
+14:35:33.866 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Configuration.dll
+14:35:33.866 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Console.dll
+14:35:33.867 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.Debug.dll
+14:35:33.867 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.dll
+14:35:33.867 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventLog.dll
+14:35:33.868 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Logging.EventSource.dll
+14:35:33.868 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+14:35:33.868 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Options.dll
+14:35:33.869 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Extensions.Primitives.dll
+14:35:33.869 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Core.dll
+14:35:33.869 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Core.xml
+14:35:33.870 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Web.WebView2.WinForms.dll
+14:35:33.870 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Web.WebView2.WinForms.xml
+14:35:33.870 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Wpf.dll
+14:35:33.871 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Microsoft.Web.WebView2.Wpf.xml
+14:35:33.871 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Nice3point.Revit.Extensions.dll
+14:35:33.871 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Nice3point.Revit.Toolkit.dll
+14:35:33.872 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\RevitWebView2.Application.deps.json
+14:35:33.872 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\RevitWebView2.Application.dll
+14:35:33.872 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\RevitWebView2.Browser.dll
+14:35:33.873 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.dll
+14:35:33.873 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\SchemaMigrations.Abstractions.pdb
+14:35:33.873 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\SchemaMigrations.Database.dll
+14:35:33.874 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\SchemaMigrations.Database.pdb
+14:35:33.874 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\SchemaMigrations.Database.xml
+14:35:33.874 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\WebView2Loader.dll
+14:35:33.875 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\Wpf.Ui.dll
+14:35:33.875 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\runtimes\win-arm64\native\WebView2Loader.dll
+14:35:33.875 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\runtimes\win-x64\native\WebView2Loader.dll
+14:35:33.876 | I | CreateInstaller      | C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\source\RevitWebView2.Application\bin\Release R25\publish\Revit 2025 Release R25 addin\RevitWebView2.Application\runtimes\win-x86\native\WebView2Loader.dll
+14:35:34.243 | D | CreateInstaller      | 
+14:35:34.243 | D | CreateInstaller      | ----------------------------------------------------------
+14:35:34.244 | D | CreateInstaller      | 
+14:35:34.244 | D | CreateInstaller      | Wix project file has been built: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\output\RevitWebView2Example-1.0.0-SingleUser.wxs
+14:35:34.244 | D | CreateInstaller      | 
+14:35:34.371 | D | CreateInstaller      | Windows Installer XML Toolset Compiler version 3.14.1.8722
+14:35:34.371 | D | CreateInstaller      | Copyright (c) .NET Foundation and contributors. All rights reserved.
+14:35:34.372 | D | CreateInstaller      | 
+14:35:34.424 | D | CreateInstaller      | RevitWebView2Example-1.0.0-SingleUser.wxs
+14:35:34.674 | D | CreateInstaller      | Windows Installer XML Toolset Linker version 3.14.1.8722
+14:35:34.674 | D | CreateInstaller      | Copyright (c) .NET Foundation and contributors. All rights reserved.
+14:35:34.675 | D | CreateInstaller      | 
+14:35:45.519 | D | CreateInstaller      | 
+14:35:45.519 | D | CreateInstaller      | ----------------------------------------------------------
+14:35:45.520 | D | CreateInstaller      | 
+14:35:45.520 | D | CreateInstaller      | MSI file has been built: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\output\RevitWebView2Example-1.0.0-SingleUser.msi
+14:35:45.520 | D | CreateInstaller      | 
+14:35:45.521 | D | CreateInstaller      |  ProductName: RevitWebView2Example
+14:35:45.521 | D | CreateInstaller      |  Version    : 1.0.0
+14:35:45.521 | D | CreateInstaller      |  ProductId  : {dc408db5-e03a-45ab-b78b-21e48ddd82ce}
+14:35:45.521 | D | CreateInstaller      |  UpgradeCode: {dc408db5-e03a-45ab-b78b-21e47ddd72ce}
+14:35:45.522 | D | CreateInstaller      | 
+14:35:45.534 | D | CreateInstaller      | 
+14:35:45.534 | D | CreateInstaller      | ----------------------------------------------------------
+14:35:45.534 | D | CreateInstaller      | 
+14:35:45.535 | D | CreateInstaller      | Wix project file has been built: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\output\RevitWebView2Example-1.0.0-MultiUser.wxs
+14:35:45.535 | D | CreateInstaller      | 
+14:35:45.596 | D | CreateInstaller      | Windows Installer XML Toolset Compiler version 3.14.1.8722
+14:35:45.597 | D | CreateInstaller      | Copyright (c) .NET Foundation and contributors. All rights reserved.
+14:35:45.597 | D | CreateInstaller      | 
+14:35:45.621 | D | CreateInstaller      | RevitWebView2Example-1.0.0-MultiUser.wxs
+14:35:45.814 | D | CreateInstaller      | Windows Installer XML Toolset Linker version 3.14.1.8722
+14:35:45.814 | D | CreateInstaller      | Copyright (c) .NET Foundation and contributors. All rights reserved.
+14:35:45.815 | D | CreateInstaller      | 
+14:35:53.165 | D | CreateInstaller      | 
+14:35:53.165 | D | CreateInstaller      | ----------------------------------------------------------
+14:35:53.166 | D | CreateInstaller      | 
+14:35:53.166 | D | CreateInstaller      | MSI file has been built: C:\Users\Sergei Nefyodov\RiderProjects\RevitWebView2Example\output\RevitWebView2Example-1.0.0-MultiUser.msi
+14:35:53.166 | D | CreateInstaller      | 
+14:35:53.167 | D | CreateInstaller      |  ProductName: RevitWebView2Example
+14:35:53.167 | D | CreateInstaller      |  Version    : 1.0.0
+14:35:53.167 | D | CreateInstaller      |  ProductId  : {dc408db5-e03a-45ab-b78b-21e48ddd82ce}
+14:35:53.167 | D | CreateInstaller      |  UpgradeCode: {dc408db5-e03a-45ab-b78b-21e47ddd72ce}
+14:35:53.168 | D | CreateInstaller      | 
+14:35:53.172 | V | CreateInstaller      | Telemetry.OnTargetSucceeded (0)
+14:35:53.172 | V | CreateInstaller      | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
