@@ -1,0 +1,11 @@
+﻿<RevitAddIns>
+    <AddIn Type="Application">
+        <Name>RevitWebView2Application</Name>
+        <Assembly>RevitWebView2.Application/RevitWebView2.Application.dll</Assembly>
+        <AddInId>9EB19AC9-090D-4497-B6C4-64CF0C9A8FF7</AddInId>
+        <FullClassName>RevitWebView2Application.Application</FullClassName>
+        <VendorId>Development</VendorId>
+        <VendorDescription></VendorDescription>
+        <VendorEmail></VendorEmail>
+    </AddIn>
+</RevitAddIns>
