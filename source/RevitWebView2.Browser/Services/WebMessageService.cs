@@ -20,7 +20,7 @@ public class WebMessageService(RevitDataService revitDataService)
             case "update":
             {
                 var data = json.RootElement.GetProperty("data").GetString();
-                var result = await revitDataService.UpdateData(data);
+                var result = await revitDataService.UpdateDataAsync(data);
                 await SendNotificationAsync(result);
                 break;
             }

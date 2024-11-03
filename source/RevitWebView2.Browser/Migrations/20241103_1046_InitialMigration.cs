@@ -29,6 +29,5 @@ public class InitialMigration_20241103_1046 : Migration
                 new FieldDescriptor( "Id", typeof(ElementId) )
             }
         });
-
     }    
 }

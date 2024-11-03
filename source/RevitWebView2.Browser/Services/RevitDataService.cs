@@ -9,7 +9,7 @@ public class RevitDataService
 {
     private readonly AsyncEventHandler<int> _handler = new();
 
-    public async Task<int> UpdateData(string text)
+    public async Task<int> UpdateDataAsync(string text)
     {
         var ids = Context.ActiveUiDocument!.Selection.GetElementIds();
         if (ids.Count == 0) return 0;

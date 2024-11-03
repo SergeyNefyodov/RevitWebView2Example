@@ -15,7 +15,7 @@ public sealed partial class BrowserView
     public BrowserView(BrowserViewModel viewModel, WebMessageService service, IServiceProvider serviceProvider)
     {
         DataContext = viewModel;
-        viewModel.UpdateRequest += (_, _) => UpdatePage();
+        viewModel.UpdateRequest += (_, _) => UpdatePageAsync();
 
         _serviceProvider = serviceProvider;
 
@@ -35,11 +35,11 @@ public sealed partial class BrowserView
         WebView.CoreWebView2.WebMessageReceived += OnWebMessageReceived;
     }
 
-    private void OnNavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
+    private void OnNavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs args)
     {
-        if (e.IsSuccess)
+        if (args.IsSuccess)
         {
-            Navigate();
+            ShowWebView();
         }
         else
         {
@@ -47,28 +47,21 @@ public sealed partial class BrowserView
         }
     }
 
-    private async void OnWebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)
+    private async void OnWebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs args)
     {
-        var message = e.TryGetWebMessageAsString();
+        var message = args.TryGetWebMessageAsString();
         await _service.HandleMessageAsync(message);
     }
 
-    private async void UpdatePage()
+    private async void UpdatePageAsync()
     {
         Navigate(typeof(LoadingPage));
         await WebView.EnsureCoreWebView2Async();
         WebView.CoreWebView2.Navigate(HostUrl);
     }
 
-    private void Navigate(Type pageType = null)
+    private void Navigate(Type pageType)
     {
-        if (pageType is null)
-        {
-            WebView.Visibility = Visibility.Visible;
-            NavigationPresenter.Visibility = Visibility.Collapsed;
-            return;
-        }
-
         var page = (Page)_serviceProvider.GetService(pageType);
         if (page is null) throw new InvalidOperationException("No page registered");
 
@@ -76,5 +69,11 @@ public sealed partial class BrowserView
         WebView.Visibility = Visibility.Collapsed;
         NavigationPresenter.Visibility = Visibility.Visible;
         NavigationPresenter.Navigate(page);
+    }
+
+    private void ShowWebView()
+    {
+        WebView.Visibility = Visibility.Visible;
+        NavigationPresenter.Visibility = Visibility.Collapsed;
     }
 }
