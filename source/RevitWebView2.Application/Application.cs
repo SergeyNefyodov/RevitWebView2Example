@@ -1,4 +1,5 @@
 ﻿using Nice3point.Revit.Toolkit.External;
+using RevitWebView2.Common.Handlers;
 using RevitWebView2Application.Commands;
 using RevitWebView2Application.Managers;
 
@@ -15,6 +16,7 @@ public class Application : ExternalApplication
         Host.Start();
         CreateRibbon();
         PanelManager.Register(Application, Host.GetService<IServiceProvider>());
+        Handlers.SetupHandlers();
     }
 
     public override void OnShutdown()

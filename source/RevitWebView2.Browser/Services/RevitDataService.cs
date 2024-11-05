@@ -1,20 +1,18 @@
 using System.Text.Json;
-using Nice3point.Revit.Toolkit.External.Handlers;
 using RevitWebView2.Browser.Models;
+using RevitWebView2.Common.Handlers;
 using SchemaMigrations.Database;
 
 namespace RevitWebView2.Browser.Services;
 
 public class RevitDataService
 {
-    private readonly AsyncEventHandler<int> _handler = new();
-
     public async Task<int> UpdateDataAsync(string text)
     {
         var ids = Context.ActiveUiDocument!.Selection.GetElementIds();
         if (ids.Count == 0) return 0;
 
-        var result = await _handler.RaiseAsync(_ =>
+        var result = await Handlers.AsyncHandler.RaiseAsync(_ =>
         {
             try
             {

@@ -8,7 +8,7 @@ namespace RevitWebView2.Browser.Views;
 
 public sealed partial class BrowserView
 {
-    private const string HostUrl = "https://localhost:44340/";
+    private const string HostUrl = "https://localhost:7096/";
     private readonly WebMessageService _service;
     private readonly IServiceProvider _serviceProvider;
 
